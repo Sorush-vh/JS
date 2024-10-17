@@ -1,0 +1,898 @@
+$afqan:#63B52A;
+$afqan2:#2D75BC;
+$purpleborderz:#4E3694;
+$backblack:#0f0f0f;
+$backblack2:#232323;
+$borderwhite:#424242;
+$grey1: #6B6B6B;
+$grey2:#696969;
+$blackborder1:#202020;
+$blackborder2:#1D1D1D;
+$whitez1: #FFFFFF;
+$gradientblue:#3D64CE;
+$gradientpurple:#6620DC;
+$gradientpurple2:#6121C4;
+$gradientpurplebutton:#54279E;
+$gradientbluebutton:#4797D1;
+$gradientblue2:#4A73C0;
+$blackinput1:#151515;
+$blackinput2:#1F1F1F;
+$blackgradient1:#242424;
+$blackgradient2:#111111;
+$blackgradient3:linear-gradient(180deg, #242424 0%, #1F1F1F 52.08%, #1A1A1A 100%);
+$navborderpurple:#5350C1;
+$profileblackgradient: linear-gradient(0deg, #242424 -6.25%, #1B1B1B 100%);
+$colorgrey3: #8E8D91;
+$colorwhite2:#F0F0F0;
+$colorwhite3:#C7C0FA;
+$colorwhite4: #F3F3F3;
+$colorgrey4: #77787A;
+$colorgrey5: #C0C0C0;
+$colorgrey6:#CACACA; 
+$colorgrey7: #656565;
+$colorwhite10:#DEDEDE;
+$colorwhite11:#FBFBFB;
+$colorgrey99:#5B5B5B;
+$buttonzblack:#1B1B1B;
+$creditback:#252525;
+$creditshit:#BDBDBD;
+$lilusershit:#C8C8C8;
+$userwhitez:#F4F4F4;
+$userwhitez2:#F8F8F8;
+$lolcolor:#5D5D5D;
+$afqan3:#6A6A6A;
+$afqan4:#575757;
+*{ 
+    margin: 0px;
+    padding: 0px;
+}
+.colorgrey5{
+    color: $colorgrey5;
+}
+.flexwrap{
+    flex-wrap: wrap;
+}
+.flexcol{
+    display: flex;
+    flex-direction: column;
+}
+.flexrow{
+    display: flex;
+    flex-direction: row;
+}
+.aligncenter{
+    align-items: center;
+}
+.flexmidrow{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.flexreverse{
+    flex-direction: row-reverse;
+}
+.flexmidcol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.margin2{
+    margin: 2px;
+}
+@mixin sizer($width, $height) {
+    width: $width;
+    height: $height
+}
+@mixin flexmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin margin-tl($top, $left) {
+    margin-top: $top;
+    margin-left: $left;
+}
+@mixin margin-rb($right, $bottom) {
+    margin-right: $right;
+    margin-bottom: $bottom;
+}
+@mixin padding($val) {
+    padding: $val;
+}
+@mixin fontz($dul) {
+font-size:$dul ;    
+}
+.cursorhover:hover{
+    cursor: pointer;
+}
+body{
+    display: flex;
+  @include sizer(1440px,1024px );
+    background-color: $backblack;
+
+
+}
+#zimg{
+    @include sizer(24px,24px);
+   position: relative;
+   top: 19px;
+   left: 19px
+}
+#zspan{
+   @include sizer(64px,64px );
+display: block;
+    border-radius: 50%;
+background: linear-gradient(297.77deg, $gradientpurple 15.57%, $gradientblue 102.73%);
+}
+// @font-face{
+//     font: 1em roboto;
+// }
+// chejuri fonto bendazim?
+@font-face {
+    font-family: Roboto;
+    src: url(../Roboto/Roboto-Black.ttf);
+}
+#title1{
+    padding: 3px 1px;
+    margin-left: 72px;
+ text-align: left;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 42px;
+display: inline-block;
+color: $whitez1;
+}
+nav{
+    margin-top: 80px
+}
+.navimgzdefault{
+    @include sizer(32px,32px );
+    border-radius: 20%;
+    
+}
+.defaultnavspan22{
+    color: $purpleborderz;
+}
+.defaultnavspann{
+ color: $afqan4;
+}
+nav {
+    display: inline-flex;
+    flex-direction: column;
+}
+#firstdivz{
+    margin-top: 45px;
+    display: inline-flex;
+}
+.defaultnavspan{
+    margin-top:20px ;
+    display: inline-block;
+    border-left:  5px solid $backblack;
+}
+.defaultnavspan2{
+    margin-top:20px ;
+    display: inline-block;
+    border-left:  5px solid $navborderpurple;
+    
+}
+
+.imgnavspan{
+    background: linear-gradient(180deg, $blackgradient1 -28.47%, $blackgradient2 75.69%);
+    margin-left: 32px;
+    border-radius: 24px;
+ @include sizer(64px,64px );
+    @include flexmid()
+
+}
+#most{
+
+   width: 73%;
+ margin-left: 24px;
+}
+#headerz1{
+    margin-top: 32px;
+    justify-content: space-between;
+    display: flex;
+
+    align-items: center;
+    margin-left: 36px;
+}
+.marginl20{
+    margin-left: 20px;
+}
+#title2{
+    display: block;
+    padding: 0px 1px;
+    margin-left: 72px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: $grey1;
+text-align: left;
+}
+#inputz1{
+    @include sizer(320px,52px );
+    background: $blackinput1;
+    border: 2px solid $blackinput2 ;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 16px;
+}
+#searchimg1{
+    margin-left: 24px;
+    @include sizer(24px,24px )
+}
+::placeholder{
+    
+    background-color:$blackinput1 ;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color:$grey2;
+outline: none;
+}
+#input1{
+    background: $blackinput1;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+    margin-left: 16px;
+    outline: none;
+    border: none;
+color: $colorgrey6;
+}
+#firstnftz{
+    margin-left: 30px;
+    display: inline-flex;
+    flex-direction: column
+}
+#firstnftz2{
+  
+}
+#firstnft{
+@include sizer(256px,296px );
+border-radius: 25px;
+@include margin-rb(0px,24px );
+@include margin-tl(24px,24px )
+}
+#firstnftsection{
+    background: $blackinput1;
+    border: 2px solid $blackborder1;
+    border-radius: 32px;
+    @include sizer(576px,344px );
+    display: flex;
+    
+}
+#firstnftdetails{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+   @include margin-tl(24px,24px )
+}
+#nftprof{
+    color:$colorgrey3;
+    display: flex;
+    align-items: center;
+}
+#firstnftprofcolor{
+    margin-right: 12px;
+    display: inline-block;
+    background: $profileblackgradient;
+    @include sizer(24px,24px );
+    border-radius:50%
+}
+#firstnftname{
+    @include margin-tl(24px,0px );
+    @include margin-rb(0px,16px );
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+display: flex;
+align-items: center;
+color: $colorwhite2;
+}
+#firstnfttimetitle{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+color: $colorgrey4;
+@include margin-rb(0,8px )
+}
+.timernftz{
+    @include margin-rb(8px,0px );
+    @include margin-tl(opx,8px );
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 15px;
+color: $colorgrey5;
+display: flex;
+align-items: center;
+text-align: center;
+padding: 8px;
+background: $blackgradient3;
+border-radius: 8px;
+}
+#fistnftbidtitle{
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+color: $colorgrey4;
+}
+#firstnftprice{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+color: $colorwhite2;
+margin-bottom: 24px;
+}
+.firstnftbuttons{
+    background: $backblack;
+    color: $colorwhite3;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+border: 2px solid $purpleborderz;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 32px;
+@include margin-rb(4px,0px );
+@include margin-tl(0px,4px )
+}
+.firstnftbuttons:hover{
+    background: linear-gradient(270deg, $gradientpurplebutton 25.23%, $gradientbluebutton 125.09%);
+}
+
+
+
+
+#button1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left:20px;
+}
+#button2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 27px;
+    padding-left:27px;
+}
+#artistssection{
+background: $blackinput1;
+border: 2px solid $blackborder2;
+border-radius: 32px ;
+align-self: flex-start;
+position: absolute;
+z-index: 9999;
+}
+#artistdiv{
+    margin-top: 40px;
+    @include margin-tl(24px,24px );
+    display: flex;
+    align-items: center;
+}
+#artistdivzmore{
+    margin-top: 40px;
+    @include margin-tl(24px,24px );
+    display: flex;
+    align-items: center;
+}
+#artisttitle{
+    @include margin-tl(32px,24px );
+width: 304px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+color: $colorwhite4;
+}
+.artistprofspan{
+margin-left: 16px
+}
+.profilecolorzartists{
+    
+    @include sizer(48px,48px );
+    border-radius: 50%;
+    background: linear-gradient(170.7deg, #242424 2.98%, #1B1B1B 75.78%);
+}
+.artistsname{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+display: flex;
+align-items: center;
+
+color: $colorgrey6
+}
+.artistsitems{
+    margin-top: 8px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+color: $colorgrey7
+}
+.artistfollowbutton{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 15px;
+margin-left: 48px;
+background-clip: text;
+// chera farq karde
+color: $gradientpurplebutton
+}
+.uselessdiv{
+    position: relative;
+
+   
+}
+
+.rightarrow{
+    @include sizer(10px,10px );
+    margin-left:8px
+}
+#moreartistz{
+   
+    position: relative;
+  
+}
+#viewmoreorless{
+    margin-left: 104px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+margin-top: 24px;
+margin-bottom: 16px;
+color: $colorgrey7
+}
+#viewmoreorlessz{
+    margin-left: 104px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+margin-top: 24px;
+margin-bottom: 16px;
+color: $colorgrey7;
+}
+#viewmoreorless2{
+   position: relative;
+   left: 330px;
+   top: 32px;
+    margin-bottom: 12px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+color: $colorgrey7;
+display: flex;
+align-items: center
+}
+.rightarrow2{
+    @include sizer(10px,10px );
+    margin: 2px;
+}
+.view1{
+    display: block
+}
+.view2{
+    display: none
+}
+.view3{
+    display:flex
+}
+.othernftbuttons{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+border: 2px solid $borderwhite;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 32px;
+color: #C1BCEF;
+padding: 10px 16px;
+margin: 0px 12px;
+}
+.nftbuttons1{
+    background: linear-gradient(270deg, #54279E 25.23%, #4797D1 125.09%);
+    border: 2px solid $purpleborderz;
+}
+.nftbuttons2{
+    background: $backblack
+}
+.othernftbuttons:hover{
+    cursor: pointer;
+}
+#buttonzdiv{
+    margin-top: 64px;
+    width: 100%;
+    display: flex;
+
+}
+#finalnftzdiv{
+    margin-left: 24px;
+    margin-top: 36px;
+
+flex-direction: row;
+}
+.finalnftzz2{
+    margin-left: 24px;
+    margin-top: 36px;
+
+flex-direction: row;
+}
+.buttonzandshit{
+
+    display: flex;
+   
+    width: 100%;
+}
+#eachnftdiv{
+    
+    margin: 12px;
+    display: inline-flex;
+   flex-direction: column;
+    @include sizer(204px,316px );
+    background: $blackinput1;
+border: 2px solid $backblack2;
+border-radius: 32px;
+}
+.finalimgz{
+    margin: 16px;
+    border-radius: 16px;
+    @include sizer(176px,200px )
+}
+#lilauction{
+    @include margin-tl(8px,24px );
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 13px;
+color: $colorgrey7;
+}
+.finalnamez{
+    @include margin-tl(8px,24px );
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+color:$colorwhite10 ;
+}
+.bitcoin{
+    display: flex;
+    align-items: center
+}
+#bitcoinsnft{
+    @include sizer(24px,24px );
+    @include margin-tl(16px,24px);
+    margin-right: 8px;
+    margin-bottom: 24px;
+}
+.bitcoincost{
+    margin-bottom: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $colorgrey5;
+}
+.likecount{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 15px;
+color: $colorgrey5
+
+}
+.likez{
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+.hearticon{
+    margin-bottom: 1px;
+    margin-left: 56px;
+    @include sizer(16px,16px );
+ 
+
+}
+.heart1{
+color: red;
+}
+.heart2{
+color: $colorgrey7;
+}
+#usersection{
+    align-self: flex-start;
+    margin-top: 30px;
+    margin-left: 88px;
+ width: 23%;
+    display: flex;
+    flex-direction: column;
+    background: $blackinput1;
+    border: 2px solid $blackinput2;
+    border-radius: 32px;
+    position:absolute;
+    right: 24px;
+}
+#userdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+}
+#useronlinespan{
+    @include margin-tl(32px,0px );
+    @include margin-rb(0px,32px)
+}
+#biguserbackcolor{
+    @include sizer(64px,64px );
+    border-radius: 50%;
+background: linear-gradient(170.7deg, $blackgradient1 2.98%, #1B1B1B 75.78%);
+display: block;
+}
+#smallgreendot{
+    @include sizer(16px,16px );
+    display: block;
+    background:$afqan ;
+    border-radius: 50%;
+    position: relative;
+    bottom: 56px;
+    left: 56px;
+}
+.randomtext{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+color: $colorwhite11;
+}
+.random2{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: $colorgrey99;
+margin-top: 16px;
+}
+.userbuttonz{
+
+    margin: 32px 12px;
+    @include sizer(56px,56px );
+background: linear-gradient(170.7deg, $blackgradient1 2.98%, $buttonzblack 75.78%);
+border-radius: 50%;
+border: 1px $blackinput1 solid;
+}
+.usericonz{
+    @include sizer(24px,24px );
+    color:$grey1
+}
+#usercreditcard{
+    @include sizer(296px,176px );
+    display: block;
+    background: $creditback;
+border-radius: 32px;
+margin:0px 24px;
+}
+#lolzcard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+#creditnumber{
+ margin-right: 16px;
+ margin-top: 16px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: $creditshit
+}
+#cardbitcoin{
+    @include margin-tl(16px,16px );
+    @include sizer(32px,32px )
+}
+#liluser{
+    margin-left: 24px;
+   
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: $lilusershit;
+}
+#userbitcoinss{
+    
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+position: relative;
+top:48px ;
+right: 48px;
+color: $userwhitez;
+}
+#lilzdad{
+position: relative;
+left: 260px;
+top: 28px;
+}
+#lilz{
+    display: block;
+    @include sizer(16px,16px );
+    border-radius:  50%;
+    background: linear-gradient(270deg, #F79F1B 25.85%, rgba(247, 159, 27, 0.45) 109.51%);
+    
+}
+#lilz2{
+    @include sizer(16px,16px );
+    display: block;
+    border-radius:  50%;
+    background: #EC001B;
+    position: relative;
+    bottom: 16px;
+    right: 8px;
+}
+#Recentactivities{
+    margin-top: 40px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+color: $userwhitez2;
+margin-left: 24px;
+
+}
+.eachnotifdiv{
+    display: flex;
+    margin: 16px;
+}
+#userdate{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: $lolcolor;
+margin-left: 24px;
+margin-top: 16px;
+}
+#notifzdiv{
+    margin-top: 32px;
+}
+.notifname{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+color: $colorwhite10;
+}
+.notifaction{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color:$afqan3;
+margin-top: 8px;
+}
+.notiftime{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+color: $afqan3;
+margin-top: 8px
+}
+.notifprofcolor{
+    @include sizer(48px,48px );
+    border-radius: 50%;
+    display: block;
+    background:  $afqan2;
+    margin-right: 24px;
+    margin-left: 24px;
+}
+#lolbaba{
+    display: block;
+    padding: 2px;
+    margin-bottom: 16px;
+}
+#shoppingsection{
+    margin-left: 48px;
+ width: 100%;
+    margin-top: 30px;
+    border-radius: 32px;
+background-color: $backblack2;
+    color: white;
+}
+#otherthanhead{
+      display: inline-flex;
+
+}
+.allbutusersection{
+    display: inline-flex;
+}
+#newnftz2{
+    margin: 16px;
+    text-align: center;
+color: $colorwhite2;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 34px;
+line-height: 16px;
+}
+.bitcoinsnft{
+    @include sizer(24px,24px );
+    @include margin-tl(16px,24px);
+    margin-right: 8px;
+    margin-bottom: 24px;
+}
+.lilauction2{
+    @include margin-tl(8px,24px );
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 13px;
+color: $colorgrey7;
+}
+.eachnftdiv2{
+    margin: 12px;
+    display: inline-flex;
+   flex-direction: column;
+    @include sizer(204px,316px );
+    background: $blackinput1;
+border: 2px solid $backblack2;
+border-radius: 32px; 
+}

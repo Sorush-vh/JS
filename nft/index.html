@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sassez.css" />
+    <link rel="stylesheet" href="css/all.css">
+  </head>
+<!-- bekhatere flex dive artista payin umade -->
+  <body ng-app="app1" ng-controller="firstcontroller">
+<div id="allbutusersection">
+
+    <div id="headerz1">
+      <span class="flexrow">
+        <span id="zspan">
+          <img src="img/icons8-z-50.png" alt="" id="zimg" />
+        </span>
+
+        <span class="flexcol marginl20">
+          <!-- nemishe celas ba andis zad? masaln .marginleft(20px) -->
+          <h1 id="title1">Dashboard</h1>
+
+          <h2 id="title2">Buy and Sell order NFT</h2>
+        </span>
+      </span>
+
+      <form id="inputz1">
+        <img src="img/icons8-search-50.png" alt="" id="searchimg1" />
+        <input type="text" placeholder="Search for arts" id="input1" />
+      </form>
+    </div>
+
+
+
+
+    <section id="otherthanhead">
+    <nav>
+      <span
+        class="class1 defaultnavspan cursorhover"
+        ng-class="selectedz[0]==true ? 'defaultnavspan2' : 'defaultnavspan'" ng-click="selected(1)">
+        <span class="imgnavspan" ng-class="selectedz[0]==true ? 'defaultnavspan22' : 'defaultnavspann'">
+          <i class="fa-solid fa-house navimgzdefault classlol1"></i>
+        </span>
+      </span>
+
+      <span class="class1 defaultnavspan cursorhover" 
+      ng-class="selectedz[1] == true ? 'defaultnavspan2' : 'defaultnavspan' " ng-click="selected(2)">
+        <span class="imgnavspan" ng-class="selectedz[1]==true ? 'defaultnavspan22' : 'defaultnavspann'">
+          <i class="fa-solid fa-cart-shopping navimgzdefault"> </i>
+        </span>
+      </span>
+
+
+      <span class="class1 defaultnavspan cursorhover" 
+      ng-class="selectedz[2]==true ? 'defaultnavspan2' : 'defaultnavspan'" ng-click="selected(3)">
+        <span class="imgnavspan" ng-class="selectedz[2]==true ? 'defaultnavspan22' : 'defaultnavspann'">
+          <i class="fa-solid fa-wallet navimgzdefault"> </i>
+        </span>
+      </span>
+
+      <span class="class1 defaultnavspan cursorhover"
+      ng-class="selectedz[3]==true ? 'defaultnavspan2' : 'defaultnavspan'" ng-click="selected(4)">
+        <span class="imgnavspan" ng-class="selectedz[3]==true ? 'defaultnavspan22' : 'defaultnavspann'">
+          <i class="fa-regular fa-compass navimgzdefault"> </i>
+        </span>
+      </span>
+      <span class="class1 defaultnavspan cursorhover" 
+      ng-class="selectedz[4]==true ? 'defaultnavspan2' : 'defaultnavspan'" ng-click="selected(5)">
+        <span class="imgnavspan" ng-class="selectedz[4]==true ? 'defaultnavspan22' : 'defaultnavspann'">
+          <i class="fa-solid fa-chart-line navimgzdefault"> </i>
+        </span>
+      </span>
+      <span class="class1 defaultnavspan cursorhover"
+      ng-class="selectedz[5]==true ? 'defaultnavspan2' : 'defaultnavspan'" ng-click="selected(6)">
+        <span class="imgnavspan" ng-class="selectedz[5]==true ? 'defaultnavspan22' : 'defaultnavspann'">
+          <i class="fa-solid fa-gear navimgzdefault"> </i>
+        </span>
+      </span>
+    </nav>
+
+
+
+
+    <section id="shoppingsection"
+    ng-class="selectedz[1]==true ? 'view1' : 'view2'" >
+      <div id="firstnftz2">
+        <h1 id="newnftz2">
+          Newest Deals
+        </h1>
+
+
+        <div class="eachnftdiv2" ng-repeat="dastan in nftzz2">
+          <img ng-src={{dastan.src}} alt="" class="finalimgz">
+          <h4 class="lilauction2">
+        auction
+          </h4>
+          <h2 class="finalnamez">
+        {{dastan.buyername}}
+          </h2>
+        
+          <div class="flexrow">
+              <span class="bitcoin">
+        <img src="img/icons8-bitcoin-96.png" alt="" class="bitcoinsnft">
+        <span class="bitcoincost">
+        {{dastan.bitcoins}}
+        </span>
+              </span>
+        
+            <span class="likez">
+              <span class="margin2"
+             ng-class="dastan.selected==true ? 'heart1' : 'heart2'" ng-click="likecounter(dastan)">
+              <i   class="fa-regular fa-heart hearticon cursorhover" > </i>
+            </span>
+        <span class="likecount">
+          {{dastan.likes}}
+        </span>
+            </span>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+
+    <section id="most"
+    ng-class="selectedz[0]==true ? 'view1' : 'view2'" >
+     
+   
+
+    <div class="flexrow" id="firstdivz">
+      
+
+
+
+
+
+
+
+
+
+      <section id="firstnftz">
+        <section id="firstnftsection">
+          <img ng-src="{{firstnft.picsrc}}" alt="" id="firstnft" />
+          <div class="flexcol" id="firstnftdetails">
+            <span id="nftprof">
+              <span id="firstnftprofcolor"> </span>
+              {{firstnft.ownername}}
+            </span>
+            <h1 id="firstnftname">{{firstnft.namez}}</h1>
+            <h3 id="firstnfttimetitle">Auction ending in:</h3>
+
+            <div class="flexrow colorgrey5 aligncenter">
+              <span class="timernftz"> {{firstnft.timeleft[0]}} </span>
+              :
+              <span class="timernftz"> {{firstnft.timeleft[1]}} </span>
+              :
+              <span class="timernftz"> {{firstnft.timeleft[2]}} </span>
+            </div>
+
+            <h4 id="fistnftbidtitle">Current Bid:</h4>
+            <h1 id="firstnftprice">{{firstnft.price}}</h1>
+            <div class="flexrow marginl20">
+              <button class="firstnftbuttons cursorhover" id="button1" >
+                Place a bid
+              </button>
+
+              <button class="firstnftbuttons cursorhover" id="button2">
+                View Art
+              </button>
+            </div>
+            
+          </div>
+          
+        </section>
+<!-- ru hover nemishe? -->
+      <div class="buttonzandshit">
+        <div id="buttonzdiv">
+          <button class="othernftbuttons" ng-click="buttonf(1)"
+           ng-class="buttonselection[0]==true ? 'nftbuttons1' : 'nftbuttons2'"  >
+           Collectibles</button>
+
+          <button class="othernftbuttons" ng-click="buttonf(2)" 
+          ng-class="buttonselection[1]==true ? 'nftbuttons1' : 'nftbuttons2'" >
+          Arts</button>
+
+          <button class="othernftbuttons" ng-click="buttonf(3)"
+           ng-class="buttonselection[2]==true ? 'nftbuttons1' : 'nftbuttons2'" >
+           Utility</button>
+
+          <button class="othernftbuttons" ng-click="buttonf(4)" 
+          ng-class="buttonselection[3]==true ? 'nftbuttons1' : 'nftbuttons2'" >
+          Sports</button>
+
+          <button class="othernftbuttons" ng-click="buttonf(5)" 
+          ng-class="buttonselection[4]==true ? 'nftbuttons1' : 'nftbuttons2'" >
+          Gaming</button>
+        </div>
+
+        <h1 id="viewmoreorless2" class="cursorhover" >
+          <span class="margin2">
+          viewless
+        </span>
+          <img src="img/icons8-right-arrow-50.png" alt="" class="rightarrow2" />
+          <!-- html ham avaz she? -->
+        </h1>
+        </div>
+        
+</section>
+
+<div class="uselessdiv">
+        <section id="artistssection">
+          <h1 id="artisttitle">Top Artists</h1>
+          <div>
+            <div id="artistdiv" ng-repeat="dastan in mainartists">
+              <span class="profilecolorzartists"> </span>
+
+              <span class="artistprofspan">
+                <h2 class="artistsname">{{dastan.namezz}}</h2>
+                <h4 class="artistsitems">{{dastan.itemz}}</h4>
+              </span>
+
+              <h3 class="artistfollowbutton cursorhover">Follow</h3>
+            </div>
+
+
+
+            
+              
+            <div id="moreartistz" 
+            ng-class="moreartistpremission == true ? 'view1' : 'view2' ">
+              <div
+                id="artistdivzmore"
+                ng-repeat="dastan in moreartistz"
+                
+              >
+                <span class="profilecolorzartists"> </span>
+                <!-- ng classs kar nmikone -->
+                <span class="artistprofspan">
+                  <h2 class="artistsname">{{dastan.namezz}}</h2>
+                  <h4 class="artistsitems">{{dastan.itemz}}</h4>
+                </span>
+
+                <h3 class="artistfollowbutton cursorhover">
+                  Follow
+                  <!-- cherafarq dare -->
+                </h3>
+              </div>
+            </div>
+
+            <h1 id="viewmoreorless" class="cursorhover" ng-click="moreorless()"
+            ng-class="moreartistpremission == true ? 'view1' : 'view2' ">
+              view less
+              <img src="img/icons8-right-arrow-50.png" alt="" class="rightarrow" />
+          </h1>
+
+            <h1 id="viewmoreorlessz" class="cursorhover" ng-click="moreorless()"
+            ng-class="moreartistpremission == false ? 'view1' : 'view2' ">
+              view more
+              <img src="img/icons8-right-arrow-50.png" alt="" class="rightarrow" />
+        </h1>
+           
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+
+<div class="finalnftzz2"
+ng-class="buttonselection[1]==true ? 'view3' : 'view2' ">
+    <div class="eachnftdiv2" ng-repeat="dastan in nftzz3"
+    ng-class="buttonselection[1]==true ? 'view1' : 'view2'">
+      <img ng-src={{dastan.src}} alt="" class="finalimgz">
+      <h4 class="lilauction2">
+    auction
+      </h4>
+      <h2 class="finalnamez">
+    {{dastan.buyername}}
+      </h2>
+    
+      <div class="flexrow">
+          <span class="bitcoin">
+    <img src="img/icons8-bitcoin-96.png" alt="" class="bitcoinsnft">
+    <span class="bitcoincost">
+    {{dastan.bitcoins}}
+    </span>
+          </span>
+    
+        <span class="likez">
+          <span class="margin2"
+         ng-class="dastan.selected==true ? 'heart1' : 'heart2'" ng-click="likecounter(dastan)">
+          <i   class="fa-regular fa-heart hearticon cursorhover" > </i>
+        </span>
+    <span class="likecount">
+      {{dastan.likes}}
+    </span>
+        </span>
+      </div>
+    </div>
+   
+  </div>
+
+
+    <div id="finalnftzdiv" 
+    ng-class="buttonselection[0]==true ? 'view3' : 'view2'">
+
+
+
+
+      <div id="eachnftdiv" ng-repeat="dastan in nftzzz">
+        <img ng-src={{dastan.src}} alt="" class="finalimgz">
+        <h4 id="lilauction">
+      auction
+        </h4>
+        <h2 class="finalnamez">
+      {{dastan.buyername}}
+        </h2>
+      
+        <div class="flexrow">
+            <span class="bitcoin">
+      <img src="img/icons8-bitcoin-96.png" alt="" id="bitcoinsnft">
+      <span class="bitcoincost">
+      {{dastan.bitcoins}}
+      </span>
+            </span>
+      
+          <span class="likez">
+            <span  ng-click="likecounter(dastan)" class="margin2"
+            ng-class="dastan.selected==true ? 'heart1' : 'heart2'">
+            <i class="fa-regular fa-heart hearticon cursorhover" ></i>
+          </span>
+      <span class="likecount">
+        {{dastan.likes}}
+      </span>
+          </span>
+        </div>
+      </div>
+  
+ 
+
+
+  
+       
+      </div>
+    </section>
+
+  
+</section>
+</div>
+<section id="usersection">
+  <div id="userdiv">
+  <span id="useronlinespan">
+  
+    <span id="biguserbackcolor">
+    </span>
+  
+    <span id="smallgreendot">
+    </span>
+  
+  </span>
+  
+  <h2 class="randomtext">
+    Luminaire
+  </h2>
+  <h4 class="random2">
+    @Luminaire_Lucianesia
+  </h4>
+  
+  <div id="userbuttons">
+    <button class="userbuttonz">
+      <i class="fa-regular fa-heart usericonz" ></i>
+    </button>
+  
+    <button class="userbuttonz">
+      <i class="fa-regular fa-comment usericonz" ></i>
+    </button>
+  
+    <button class="userbuttonz">
+      <i class="fa-regular fa-bell usericonz" ></i>
+    </button>
+  </div>
+  
+  
+  
+  <div id="usercreditcard">
+    <span id="lolzcard">
+  <img src="img/icons8-bitcoin-96.png" alt="" id="cardbitcoin">
+  <span id="creditnumber">
+  **** **** 9850
+  </span>
+    </span>
+    <span id="liluser">
+      Bitcoin
+    </span>
+    <span id="userbitcoinss">
+      1.9015208
+    </span>
+  
+    <span id="lilzdad">
+      <span id="lilz">
+      </span>
+  
+      <span id="lilz2">
+      </span>
+    </span>
+  </div>
+  
+  </div>
+  
+  
+  <h2 id="Recentactivities">
+    Recent Activities
+  </h2>
+  
+  <h3 id="userdate">
+    24 Jun 2021
+  </h3>
+  
+  
+  
+  <div id="notifzdiv">
+  <div class="eachnotifdiv" ng-repeat="lolz in notifz">
+    <span class="notifprofcolor">
+    </span>
+  
+    <div class="notifdetaildiv">
+      <h2 class="notifname">
+       {{lolz.namenotif}}
+      </h2>
+  
+      <h4 class="notifaction">
+      {{lolz.action}}
+      </h4>
+  
+      <h5 class="notiftime">
+       {{lolz.time}}
+      </h5>
+    </div>
+ 
+  </div>
+ 
+ 
+  </div>
+    </section>
+  
+ <script src="js/all.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
