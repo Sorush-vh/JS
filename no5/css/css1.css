@@ -1,0 +1,852 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.flex{
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+.colorgreen{
+    color: #1c7256;;
+}
+.spacebetween{
+justify-content: space-between;
+}
+.flexgrow6{
+    flex-grow: 6;
+}
+.flexgrow1{
+    flex-grow: 1;
+}
+.padding6{
+padding: 6px;
+}
+.textdec1{
+    text-decoration: none;
+}
+.block{
+    display: block;
+}
+.fontsize1{
+    font-size: 19px;
+}
+.aligncenter{
+    align-items: center;
+}
+ #none1{
+    display: none;
+}
+#parentnone1:hover #none1{
+    display: block;
+}
+.relativepos{
+    position: relative; top:80px;
+}
+.w300{
+    width:400px
+}
+.w100{
+    width: 150px;
+}
+.margin{
+    margin: 10px;
+}
+.textalign1{
+    text-align: right;
+}
+.white{
+    color: #fff;
+}
+.backorange{
+    background-color:#fe6666;
+}
+.centerjustify{
+ justify-content: center;
+}
+.backwhite{
+    background-color: #fff;
+}
+.border1{
+    border: 10px solid #e2e4e746;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.margin2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.width100{
+    width: 100%;
+}
+.rawflex{
+display: flex;
+
+}
+.backimg1{
+    background-image: url(../img/doctors-day-main-slide.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.rightjustify{
+    justify-content: right;
+    display: flex;
+}
+.w200{
+    width: 400px;
+}
+.font15{
+    font-size: 35px;
+}
+.font12{
+    font-size: 15px;
+}
+.textcenter{
+    text-align: center;
+}
+.flexcol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.padding20{
+    padding: 30px;
+}
+.border3{
+    border: 1px #fe6666 solid;
+   border-radius: 20px;
+}
+.margin3{
+margin: 20px;
+}
+.imgedit{
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+}
+.tablecaption{
+    display: table-caption;
+}
+.colororange{
+    color: #fe6666;
+}
+.hover:hover{
+    border: #fe6666 1px solid;
+    cursor: pointer;
+}
+.hover2:hover{
+    text-shadow: 0px 1px 0px #fe66665b;
+}
+
+.hover3:hover{
+    text-decoration:underline
+}
+.textdec2{
+    text-decoration: line-through;
+    color: #fe6666;
+    font-size: 13px;
+}
+.font23{
+    font-size: 23px;
+}
+.inlineblock{
+    display: inline-block;
+}
+.button2{
+    padding: 15px;
+    border: #fe6666 2px solid;
+    border-radius: 10px;
+    font-family: iransans;
+}
+.hover4:hover{
+    box-shadow: 1px -1px 1px #fe6666;
+    border: rgba(41, 49, 45, 0.345) solid 2px;}
+    
+
+.backcolor2{
+    background-color: rgba(153, 158, 159, 0.404);
+}
+.spacearound{
+    justify-content: space-around;
+}
+
+.head_edit{
+    color: #7a7a7a;
+}
+.backcolor3{
+    background-color: #7a7a7a17;
+}
+.h1{
+    font-size: 35px;
+    padding: 10px;
+    color: #615f79d8;
+}
+.position{
+    position: sticky ; top: 0px;
+}
+.liststyle{
+    list-style-type: none;
+}
+
+
+.margintop{
+    margin-top:12px ;
+}
+/* .inline{
+    display: block;
+} */
+.border4{
+    border: 1px solid white;
+
+}
+.button3{
+    background-color: #fe6666;
+    color:white;
+    padding: 6px;
+    border: 1px solid #fe6666;
+    border-radius: 12px;
+    font-family: iransans;
+    font-size: 1vw;
+}
+.button3:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #7a7a7a ; 
+    /* un akharin itemo yebar dige begu */
+}
+.imgedit3{
+    width: 350px;
+    height: 300px
+}
+.margin5{
+    margin: 5px 0px;
+}
+.widthhalf{
+    width: 45%;
+}
+.flexx{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+#backimg3{
+    background-image: url(../img/Gardening-services-houseplants-in-home.webp);
+    background-repeat: no-repeat;
+    width: 50%;
+    background-size: 100%;
+    height: 300px;
+}
+#backimg4{
+    background-image: url(../img/housePlant-protection-services.webp);
+    background-repeat: no-repeat;
+    width:50%;
+    background-size: 100%;
+    height: 300px;
+}
+.shadowtext2:hover{
+    text-shadow: 2px 2px 2px #fff;
+}
+.dirright{
+    direction: rtl;
+}
+.input1{
+ height: 44px;
+    font-size: 16px;
+    color: black;
+    direction: rtl;
+    border: none;
+    border-radius:0px 10px 10px 0px ;
+    margin-top: 1px;
+}
+#button4{
+    background-color: #fe6666;
+    color: #fff;
+    font-family: iransans;
+    padding:11px 5px;
+    border: none;
+    border-radius: 6px 0px 0px 6px;
+}
+/* .position4{
+    position:relative; left:4px; top: -1px;
+    z-index: 2;
+   
+} */
+.button4{
+    background-color: #fe6666;
+    color:white;
+    font-size: 20px;
+    border: 0px solid #fe6666;
+    border-radius: 10px 0px 0px 10px;
+    padding: 10px;
+    font-family: iransans;
+}
+    
+#button4:hover {
+    cursor: pointer;
+    
+    
+}
+.backcolorgrey{
+    background-color: #646680;
+}
+.fixposition1{
+    position: fixed; top: opx; right: 0px; left: 0px;
+    z-index: 11;
+   
+}
+.fixposition2{
+    position: fixed; top:60px ;right: 0px; left: opx;
+    z-index: 1;
+}
+.font20{
+    font-size: 20px;
+}
+.position3{
+    position: relative; left: 5px ; top: 2px;
+}
+.positionabsolute{
+    position: absolute; top: 40px; right: 13%;
+    z-index: 10;
+}
+.flexcol2{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+   /* chera inja justify contect kolan kharab mikone? */
+   min-width: 70px;
+}
+
+.size2{
+    width: 80px
+}
+.text-align-right{
+text-align: right;
+}
+.colorgrey2{
+    color: #555;;
+}
+
+.listpadding{
+    padding: 0px 20px 20px 20px;
+}
+.zindex10{
+    z-index: 10;
+}
+.zindex1{
+    z-index: 1;
+}
+.zindex15{
+    z-index: 999999999999999999999;
+}
+/* chera zindex un bala kar nemikone? */
+#backimg5{
+width: 50%;
+    background-image: url(../img/geometric-terrarium-gift-golsetan.jpg)
+}
+
+#backimg6{
+    background-image: url(../img/flowers-gift-box-banner-golsetan.jpg);
+    width: 50%;
+}
+
+.size4{
+    width: 250px;
+}
+.margin6{
+    margin: 10px 0px;
+}
+.listpadding2{
+    padding: 40px;
+}
+.margin7{
+    margin: 15px 0px;
+}
+.font30{
+    font-size: 30px;
+}
+.font17{
+    font-size: 19px;
+}
+.top-bottom-border{
+    border-top: 1px solid rgba(85, 85, 85, 0.21);
+    border-bottom: 1px solid rgba(85, 85, 85, 0.088);
+}
+#img8{
+    width: 270px;
+
+}
+.size5{
+    width: 50%;
+}
+.colorgrey3{
+    color: #7a7a7a;
+}
+.size6{
+    width: 290px;
+}
+.colorgrey4{
+    color: #646680;
+}
+.font14{
+    font-size: 14px;
+}
+.colororange2{
+    color: #fe6666c0;
+}
+.hover10:hover {
+    text-decoration:underline;
+}
+.alignstart{
+    align-items: flex-start;
+}
+.size7{
+    size:203px
+}
+.button5{
+    border: #fe6666 1px solid;
+    padding: 15px;
+    color: black;
+    background-color: #fff;
+    font-size: 15px;
+    border-radius: 15px;
+    margin: 0px 2px;
+    font-family: iransans;
+}
+.button5:hover{
+    background-color: #fe6666;
+    text-decoration: underline;
+    color: #fff;
+}
+.w750{
+    width: 750px;
+}
+.size8{
+    width: 30%;
+}
+.text1{
+    position: relative; bottom: 2px;
+    font-size: 17px;
+    color: #fe6666a1;
+    text-decoration: none;
+    font-family: iransans;
+}
+.text1:hover {
+    text-decoration: underline;
+}
+#paragraph1{
+    display: none;
+}
+.position2{
+    position:relative; top:-80px;
+    background-color: #fff;
+    padding: 30px
+}
+#paragraph2{
+    color: rgba(16, 14, 14, 0.267);
+}
+.button6:hover{
+    cursor: pointer;
+}
+.button6{
+    background-color: #fff;
+    color: #fe6666;
+    border: 1px soid white;
+    font-size: 18px;
+    border: #fff 1px solid;
+    font-family: iransans;
+}
+
+.button6:hover .position2{
+    display: none;
+}
+.button6:hover #paragraph1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fe6666;
+}
+#hider2{
+    display: none;
+}
+.position3{
+    position:relative; top:-15px;
+    background-color: #fff;
+    padding: 30px
+}
+.margin77{
+    margin: 30px 0px;
+}
+
+.borderblack{
+    border: black 1px solid;
+}
+.iconsize1{
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+}
+.img9{
+    width: 30px;
+    height: 25px;
+}
+#copyicon{
+    width: 35px;
+    height: 25px;
+    padding: 4px 8px;
+    background-color: #1c7256;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+#copyicon:hover{
+    cursor: pointer;
+
+}
+#copytext{
+    padding: 6px 14px;
+    margin-left: 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+}
+.font13{
+    font-size: 14px;
+}
+.sidemargin4{
+    margin: 0px 8px;
+}
+.img10{
+    width: 15px;
+    height: 15px;
+}
+@font-face {
+    font-family:iransans ;
+    src: url(IRANSans.ttf);
+}
+.iransans{
+    font-family: iransans;
+}
+.margintop2{
+    margin-top: 12px;
+}
+.lol1{
+    
+    height: 100px;
+    width: 100px;
+    background-color: #1c7256;
+    display: none;
+}
+.lol1:first-child{
+    transition: all 3s;
+}
+.lol2:hover > *{
+    width: 300px;
+    display: flex;
+}
+
+
+
+   
+
+
+#top2{
+    display: none;
+}
+.spacearound1{
+    justify-content: space-between;
+    display: flex;
+}
+.full_line{
+ display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.imgtrans{
+    width: 95%;
+    height: 70%;
+    margin-bottom: 9px;
+    transition: all 0.5s; 
+    transition-timing-function: ease-out;
+    border: 1px white solid;
+}
+/* miay rush kole sight ye tekon mikhore */
+.imgtrans:hover{
+    border: 1px solid black;
+    border-radius: 15px;
+    width:97% ;
+    height:72% ;
+ margin-bottom: 0px;
+}
+#menubar{
+    width: 50px;
+    height: 50px;
+}
+.w380{
+    width: 20%;
+}
+/* .imgedit2{
+    width: 95%;
+    height: 80%;
+} */
+.full_line2{
+    width: 100%;
+
+    
+}
+.text-align-justify{
+    text-align: justify;
+}
+.size3{
+    width: 70%;
+}
+.full_line3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.marginright1{
+    margin-right: 20px;
+}
+.marginright2{
+margin-right: 25px;
+}
+#listhover2b{
+    display: none;
+}
+::placeholder{
+    text-indent: 10px;
+}
+.nohover{
+    cursor: auto;
+    width: 20%;
+}
+.cursorhover:hover{
+    cursor: pointer;
+}
+.cutprice{
+    font-size: 1vw;
+}
+.mainprice{
+    font-size: 1.4vw;
+}
+.colorblack1{
+    color: black;
+    font-size: 1.5vw;
+}
+#newshead{
+    font-size: 1.6vw;
+}
+.backimg1{
+    height: 350px;
+}
+.underheadlinez{
+    background-image: url(../img/title-lines.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 170px;
+}
+.list2position{
+    position: absolute; top: 50px; right: 20px; 
+     
+}
+.margin99{
+    margin-top: 30px;
+   
+}
+#hoverz3b{
+    display: none;
+}
+#hoverz3:hover #hoverz3b{
+display: block;
+}
+#hoverz4b{
+    display: none;
+}
+#hoverz4:hover #hoverz4b{
+    display: block;
+}
+
+.margin55{
+    margin-top: 30px;
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+.margin22{
+    margin: 3px;
+}
+.colorblack2{
+    color: #3c3e4f;
+}
+.marginright20{
+    margin-right: 10px;
+}
+.overflow1{
+    overflow: auto;
+    height: 480px;
+}
+.font99{
+    font-size: 22px;
+}
+.wwidth90{
+    width: 90%;
+}
+.flexcol3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: right;
+}
+.headspan{
+    text-align: right;
+    width: 200px;
+    display: block;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.buttonsize{
+    width: 160px;
+}
+.hover1b{
+    opacity: 0;
+     visibility: hidden;
+     display: flex;
+     flex-direction: row-reverse;
+     flex-wrap: wrap;
+ }
+ 
+ .hover1:hover .hover1b{
+     opacity: 1;
+    visibility: visible;
+    transition: 1s;
+    
+    
+ }
+.flexxxwrap{
+   
+    flex-wrap: wrap;
+}
+.size66{
+    width: 20%;
+}
+.margin11{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.q-and-a{
+    color: #1c7256;
+    font-size: 20px;
+direction: rtl;
+ margin: 8px 0px;
+}
+.q-and-a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.answers{
+    font-size: 14px;
+    font-family: iransans;
+    display: none;
+    direction: rtl;
+
+}
+.iconz1{
+    width: 15px;
+    height: 15px;
+}
+
+@media screen and (max-width: 750px) {
+    .flexxwrap{
+        flex-wrap: wrap;
+    }
+    #button4{
+        position: static;
+    }
+    #top2{
+        display: block;
+    }
+    #top1{
+        display: none;
+    }
+    .button3{
+      font-size: 10px;  
+    }
+    .cutprice{
+        font-size: 10px;
+    }
+    .mainprice{
+        font-size: 15px;
+    }
+    .colorblack1{
+        font-size: 18px;
+    }
+    .imgtrans{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 9px;
+        transition: all 0.5s; 
+        transition-timing-function: ease-out;
+        border: 1px white solid;
+    }
+    .imgtrans:hover{
+        border: 1px solid black;
+        border-radius: 12px;
+        width:109px ;
+        height:109px ;
+     margin-bottom: 0px;
+    }
+    #button4{
+       width: 60%; 
+        padding: 6px;
+        border-radius: 8px;
+    }
+    #inputz1{
+        border-radius: 5px;
+        height: 40px;
+        margin-bottom: 8px;
+    }
+    #newspaper{
+        justify-content: center;
+    }
+    #newshead{
+        text-align: center;
+        font-size: 20px;
+    }
+    .addstext{
+        font-size: 26px;
+    }
+    .backimg1{
+        background-size: auto;
+    }
+    .addsimg{
+        background-size: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .addsection{
+        flex-direction: column;
+    }
+    #backimg5{
+        width: 100%;
+    }
+    #backimg6{
+        width: 100%;
+    }
+    #backimg3{
+        width: 100%;
+        height: 150px;
+    }
+    #backimg4{
+        width: 100%;
+        height: 150px;
+       
+    }
+    ::placeholder{
+        text-indent: 6px;
+    }
+    
+}
