@@ -1,0 +1,376 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Todo List Application API",
+      "version": "1.0.0",
+      "description": "This is the API specification for a Todo list application built using the MEAN stack."
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000",
+        "description": "Local development server"
+      }
+    ],
+    "paths": {
+      "/api/users": {
+        "get": {
+          "summary": "Get all registered users",
+          "operationId": "getUsers",
+          "responses": {
+            "200": {
+              "description": "List of all registered users",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Server error"
+            }
+          }
+        },
+        "post": {
+          "summary": "Register a new user",
+          "operationId": "registerUser",
+          "requestBody": {
+            "description": "User details to register",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInput"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Newly registered user",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Validation error"
+            }
+          }
+        }
+      },
+      "/api/login": {
+        "post": {
+          "summary": "Login a user",
+          "operationId": "loginUser",
+          "requestBody": {
+            "description": "User login credentials",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginInput"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Login successful",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Login successful"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid email or password"
+            }
+          }
+        }
+      },
+      "/api/saveRegisteredUser": {
+        "post": {
+          "summary": "Save registered user data to JSON",
+          "operationId": "saveRegisteredUser",
+          "requestBody": {
+            "description": "User data to save",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Registered user saved successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Registered user saved"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Server error"
+            }
+          }
+        }
+      },
+      "/api/saveLoggedInUser": {
+        "post": {
+          "summary": "Save logged-in user data to JSON",
+          "operationId": "saveLoggedInUser",
+          "requestBody": {
+            "description": "User email to save",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string",
+                      "example": "user@example.com"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Logged-in user saved successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Logged-in user saved"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Server error"
+            }
+          }
+        }
+      },
+      "/todos": {
+        "get": {
+          "summary": "Get all todos",
+          "operationId": "getTodos",
+          "responses": {
+            "200": {
+              "description": "List of all todos",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Todo"
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Server error"
+            }
+          }
+        },
+        "post": {
+          "summary": "Create a new todo",
+          "operationId": "createTodo",
+          "requestBody": {
+            "description": "Todo details",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TodoInput"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Newly created todo",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Todo"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Validation error"
+            }
+          }
+        }
+      },
+      "/todos/{id}": {
+        "delete": {
+          "summary": "Delete a todo",
+          "operationId": "deleteTodo",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "ID of the todo to delete"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Todo deleted successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Todo deleted"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Server error"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "User": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "John Doe"
+            },
+            "email": {
+              "type": "string",
+              "example": "john.doe@example.com"
+            },
+            "password": {
+              "type": "string",
+              "example": "securepassword"
+            }
+          }
+        },
+        "UserInput": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "John Doe"
+            },
+            "email": {
+              "type": "string",
+              "example": "john.doe@example.com"
+            },
+            "password": {
+              "type": "string",
+              "example": "securepassword"
+            }
+          },
+          "required": ["name", "email", "password"]
+        },
+        "LoginInput": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "example": "john.doe@example.com"
+            },
+            "password": {
+              "type": "string",
+              "example": "securepassword"
+            }
+          },
+          "required": ["email", "password"]
+        },
+        "Todo": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "example": "Finish the project"
+            },
+            "type": {
+              "type": "string",
+              "example": "Task"
+            },
+            "date": {
+              "type": "string",
+              "format": "date",
+              "example": "2023-10-10"
+            },
+            "completed": {
+              "type": "boolean",
+              "example": false
+            }
+          }
+        },
+        "TodoInput": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "example": "Finish the project"
+            },
+            "type": {
+              "type": "string",
+              "example": "Task"
+            },
+            "date": {
+              "type": "string",
+              "format": "date",
+              "example": "2023-10-10"
+            }
+          },
+          "required": ["text", "type", "date"]
+        }
+      }
+    }
+  }

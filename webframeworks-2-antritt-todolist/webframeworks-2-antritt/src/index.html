@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="menuApp">
+<head>
+  <meta charset="utf-8">
+  <title>Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="LoggedInEmail.js"></script>
+  <script src="menu.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="menuController" class="menu-body">
+  
+  <div class="container-menus" id="navigation-div">
+      <h1>Welcome to the To-do list application!</h1>
+      <div>
+        <button ng-click="gotologin()" class="adjusted_size">I already have an account</button>
+        <button ng-click="gotosignup()" class="adjusted_size">Sign up</button>
+      </div>
+  </div>
+
+  <div class="container-menus" id="signup-div">
+    <h1>Signup Menu</h1>
+    <input type="text" placeholder="username" id="username" class="login_inputs">
+    <input type="text" placeholder="email" id="email" class="login_inputs">
+    <input type="password" placeholder="password" id="password" class="login_inputs">
+    <input type="password" placeholder="repeat password" id="password_repeat" class="login_inputs">
+    <div class="button_container">
+      <button class="adjusted_size" ng-click="signup()">Sign Up</button>
+      <button class="back_button" ng-click="back()">Back to Main Menu</button>
+    </div>
+    <h2 class="error_notifier" id="signup_notif" ng-class="{'fade-out': isFadingOut}">{{notifierText}}</h2>
+  </div>
+
+  <div class="container-menus" id="login-div">
+    <h1>Login Menu</h1>
+    <input type="text" placeholder="user email" id="email_login" class="login_inputs">
+    <input type="password" placeholder="password" id="password_login" class="login_inputs">
+    <div class="button_container">
+      <button class="adjusted_size" ng-click="login()">Login</button>
+      <button class="back_button" ng-click="back()">Back to Main Menu</button>
+    </div>
+    <h2 class="error_notifier" id="login_notif" ng-class="{'fade-out': isFadingOut}">{{notifierText}}</h2>
+  </div>
+
+</body>
+</html>

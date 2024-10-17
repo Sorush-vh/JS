@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.12/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.2/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-aria/1.8.2/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.12/angular-material.min.js"></script>
+    <script src="LoggedInEmail.js"></script>
+    <script src="app.js"></script>
+    <script src="menu.js"></script>
+</head>
+<body ng-controller="TodoController">
+    <!-- Navigation Bar -->
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Todo List</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Logout" ng-click="logout()">
+                <md-icon>exit_to_app</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <div class="todo-container">
+        <h1>Todo List</h1>
+        <input type="text" ng-model="newTodo.text" placeholder="Add a new task...">
+        <select ng-model="newTodo.type">
+            <option value="" disabled selected hidden>Type</option>
+            <option value="task">Task</option>
+            <option value="reminder">Reminder</option>
+            <option value="event">Event</option>
+            <option value="project">Project</option>
+            <option value="note">Note</option>
+        </select>
+        <input type="date" ng-model="newTodo.date">
+        <button ng-click="addTodo()">Add</button>
+        <md-table-container>
+            <table md-table>
+                <thead md-head>
+                    <tr md-row>
+                        <th md-column>Task</th>
+                        <th md-column>Type</th>
+                        <th md-column>Date</th>
+                        <th md-column>Completed</th>
+                        <th md-column>Actions</th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr md-row ng-repeat="todo in todos track by $index">
+                        <td md-cell>{{todo.text}}</td>
+                        <td md-cell>{{todo.type}}</td>
+                        <td md-cell>{{todo.date | date:'shortDate'}}</td>
+                        <td md-cell><input type="checkbox" ng-model="todo.completed"></td>
+                        <td md-cell>
+                            <button ng-click="removeTodo($index)">Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+    </div>
+</body>
+</html>

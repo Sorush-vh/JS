@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "66d6fcd909eab274d7821474",
+    "text": "New Todo",
+    "type": "task",
+    "date": "2023-10-10T00:00:00.000Z",
+    "completed": false,
+    "__v": 0
+  },
+  {
+    "_id": "66d709e4c20b6dbc0ba70641",
+    "text": "new",
+    "type": "reminder",
+    "date": "2024-12-01T23:00:00.000Z",
+    "completed": false,
+    "__v": 0
+  },
+  {
+    "_id": "66d70a921480702d18e25072",
+    "text": "New Todo",
+    "type": "task",
+    "date": "2023-10-10T00:00:00.000Z",
+    "completed": false,
+    "__v": 0
+  }
+]
